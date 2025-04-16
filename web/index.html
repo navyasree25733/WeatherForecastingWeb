@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="timeBasedBackground">
+  <div class="weather-panel">
+    <div class="search-box">
+      <input type="text" placeholder="Enter city" id="cityInput">
+      <button onclick="searchWeather()">Search</button>
+      <select id="unitSelect">
+        <option value="metric">°C</option>
+        <option value="imperial">°F</option>
+      </select>
+    </div>
+
+    <div class="current-weather">
+      <h1 id="temperature"></h1>
+      <p class="condition" id="condition"></p>
+      <p class="location" id="location"></p>
+    </div>
+    <div class="weather-highlights">
+      <h2>Today's Highlights</h2>
+      <div class="highlights-grid">
+        <div class="highlight-box"><h3>Humidity</h3><p id="humidity"></p></div>
+        <div class="highlight-box"><h3>Wind Speed</h3><p id="wind"></p></div>
+        <div class="highlight-box"><h3>Pressure</h3><p id="pressure"></p></div>
+        <div class="highlight-box"><h3>Clouds</h3><p id="clouds"></p></div>
+        <div class="highlight-box"><h3>Sunrise</h3><p id="sunrise"></p></div>
+        <div class="highlight-box"><h3>Sunset</h3><p id="sunset"></p></div>
+        
+      </div>
+    </div>
+
+    <div class="weekly-forecast">
+      <h2>Weekly Forecast</h2>
+      <div class="days-grid" id="forecast">
+        <!--JS will inject forecast here-->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
